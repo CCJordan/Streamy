@@ -7,16 +7,23 @@ To find a faster solution, I used some commandline tools and a little php magic.
 
 ## Usage
 I use ffmpeg to grab my screen and audio pack it and send it to my server.
+
 macOS:
+
 List your devices:
+
 ``ffmpeg -f avfoundation -list_devices true -i ""``
+
 Stream from main monitor:
+
 ``ffmpeg -f dshow -f avfoundation -i 2:0 -preset fast -vcodec libx264 -tune zerolatency -f mpegts tcp://<<IP>>:12345``
 
 Linux
+
 ``ffmpeg -f dshow -video_size 1920x1080 -f x11grab -i :0.0+0,0 -vcodec libx264 -tune zerolatency -b 900k -f mpegts tcp://<<IP>>:12345``
 
 On the server I use nc to write the stream to a file in the same directory as the stream.php file:
+
 ``nc -l 12345 > mediaFile.mkv``
 
 Of course you first have to open the port and start the stream after it.

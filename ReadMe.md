@@ -1,7 +1,7 @@
 # Streamy
 
 This is the work of less than an hour, so don't expect it to be feature complete.
-A friend of mine wanted me to teach him KSP with Realism Overhaul and to judge his rocket designs. Twich has a latency of approximately 12 seconds, which makes explaining things really annoying.
+A friend of mine wanted me to teach him KSP with Realism Overhaul and to judge his rocket designs. Twitch has a latency of approximately 12 seconds, which makes explaining things really annoying.
 
 To find a faster solution, I used some commandline tools and a little php magic.
 
